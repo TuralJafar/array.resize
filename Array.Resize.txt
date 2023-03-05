@@ -1,0 +1,36 @@
+ bool flag = true;
+int increment = 0;
+Console.WriteLine("Please enter number of how you would like the resize your array: ");
+int sizeArray = Convert.ToInt32(Console.ReadLine());
+int[] numbers = new int[0];
+for (int i = 1; i < sizeArray; i++)
+{
+    Console.WriteLine("please enter a number: ");
+    int MasizeArray= int.Parse(Console.ReadLine());
+    Array.Resize(ref numbers, i);
+    numbers[i-1] = MasizeArray;
+}
+for (int i = 0; i < sizeArray; i++)
+{
+    Console.WriteLine(numbers[i]+"\t");
+}
+Console.ReadLine();
+do
+{
+    Console.WriteLine("Enter element ");
+    int element = Convert.ToInt32(Console.ReadLine());
+    Console.WriteLine(element);
+    numbers[increment] = element;
+    increment++;
+    Console.WriteLine("Do you want to continue? ");
+    string answer = Console.ReadLine();
+    if (!(answer == "y" || answer == "Y"))
+    {
+        flag = false;
+        Console.WriteLine(".......exiting");
+    }
+
+} while (flag);
+    }
+}
+    
